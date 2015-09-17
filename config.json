@@ -1,0 +1,18 @@
+{
+  "filepaths": {
+    "libs": {
+      "bower": "bower_components",
+      "patternlab": "src/core"
+    },
+    "local": {
+      "src": "src/source",
+      "preview": "src/public",
+      "build": "build/wp-content/themes/wdlr",
+      "styleguide": "build/styleguide"
+    }
+  },
+  "filetypes": {
+    "images": "{jpg,jpeg,png,gif,svg}",
+    "fonts": "{svg,eot,otf,ttf,woff,woff2}"
+  }
+}

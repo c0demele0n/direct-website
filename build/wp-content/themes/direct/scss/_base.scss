@@ -1,0 +1,52 @@
+$base-font-size: 16px;
+
+/**
+ *	Example Usage
+ *	color: color(orange);
+ *	color: color(orange, pale);
+ *	color: color(orange, dark, .8); 
+ */ 
+$color-stack:
+	(group: red, id: normal, color: #ff0000),
+	(group: red, id: pale, color: #f68e8e),
+	(group: gray, id: normal, color: #808080),
+	(group: gray, id: pale, color: #c0c0c0),
+	(group: gray, id: dark, color: #404040),
+	(group: black, id: normal, color: #000),
+	(group: white, id: normal, color: #FFF);
+
+/**
+ *	Example Usage
+ *	@include font(brandon);
+ *	@include font(brandon, light-italic);
+ */ 
+$font-stack:
+  (group: default, id: bold, font: ('Helvetica Neue', 'Helvetica', 'Arial', sans-serif), weight: 800, style: normal),
+  (group: default, id: regular, font: ('Helvetica Neue', 'Helvetica', 'Arial', sans-serif), weight: 400, style: normal);
+
+/**
+ *	Example Usage
+ *	@include media(small) {}
+ *	@include media(small, inbetween) {} 
+ *	@include media(custom, screen, "(max-device-width: 360px)") {}
+ */ 
+$media-stack:
+  (group: smallest, id: general, rule: "only screen and (max-width: 34.9375em)"),
+  (group: small, id: general, rule: "only screen and (min-width: 35em)"),
+  (group: medium, id: general, rule: "only screen and (min-width: 50em)"),
+  (group: large, id: general, rule: "only screen and (min-width: 62.5em)"),
+  (group: custom, id: screen, rule: "only screen and ");
+
+/**
+ *	easings
+ */
+$bezier: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+$bezier_in: cubic-bezier(0.175, 0.885, 0, 0);
+$bezier_out: cubic-bezier(0, 0, 0.32, 1.275);
+
+
+/**
+ *	dependencies
+ */
+@import "compass";
+@import "compass/css3/user-interface";
